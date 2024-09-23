@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de nombres</h1>
+    <h2>Filtrar por nombre</h2>
+    <form action="/getByNombre" method="get">
+        <input type="text" placeholder="Ingresa el nombre" name="nombre" id="nombre">
+        <button type="submit">Filtrar</button>
+    </form>
+    <h2>Insertar nombre nuevo</h2>
+    <form action="/" method="post">
+        <input type="text" placeholder="Ingresa el nombre" name="nombre" id="nombre">
+        <button type="submit">Ingresar</button>
+    </form>
+    {{#each datos}}
+        <p>{{this}}</p>
+    {{/each}}
+</body>
+</html>
